@@ -1,8 +1,21 @@
-.carousel-inner {
-  height: 600px;
+/* evita desbordes */
+.carousel { overflow: hidden; }
 
-  .mejorasImagenes {
-    height: 100%;
-    object-fit: contain;
-  }
+/* alto del carrusel */
+.carousel-inner { height: 600px; }
+
+/* cada slide debe heredar ese alto */
+.carousel-item { height: 100%; }
+
+/* la imagen llena el slide sin salirse */
+.carousel-item > img.mejorasImagenes {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 991.98px) {
+  .carousel-inner,
+  .carousel-item { height: 55vh; min-height: 320px; }
 }

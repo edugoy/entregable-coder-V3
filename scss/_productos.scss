@@ -6,6 +6,7 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
   margin-top: 1.5rem;
+  overflow: visible; // por si algún padre usa overflow hidden
 
   h3, p { font-family: $font-body; }
 
@@ -15,6 +16,12 @@
     border-radius: 12px;
     padding: .75rem;
     text-align: center;
+
+    // hover smooth + no reflow
+    position: relative;                         // permite elevar con z-index
+    transition: transform .25s ease, box-shadow .25s ease;
+    transform-origin: center;
+    will-change: transform;
   }
 
   img {
@@ -25,7 +32,30 @@
     margin-bottom: .5rem;
   }
 
+  // Desktop: 4 por fila
   @include respond(lg) {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  // Hover sólo en dispositivos con hover (evita “salto” en mobile)
+  @media (hover: hover) and (pointer: fine) {
+    article:hover,
+    article:focus-within {
+      transform: scale(1.03);
+      z-index: 2;
+      box-shadow: 0 12px 24px rgba(0,0,0,.12);
+    }
+  }
+}
+
+// Respeto a usuarios que piden reducir movimiento
+@media (prefers-reduced-motion: reduce) {
+  .productos-ind article {
+    transition: none;
+  }
+  .productos-ind article:hover,
+  .productos-ind article:focus-within {
+    transform: none;
+    box-shadow: none;
   }
 }

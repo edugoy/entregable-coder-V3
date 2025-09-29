@@ -1,0 +1,31 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.productos-ind {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+
+  h3, p { font-family: $font-body; }
+
+  article {
+    background: #fff;
+    border: 1px solid $gris-borde-light;
+    border-radius: 12px;
+    padding: .75rem;
+    text-align: center;
+  }
+
+  img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: .5rem;
+  }
+
+  @include respond(lg) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

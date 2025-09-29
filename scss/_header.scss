@@ -1,0 +1,24 @@
+@use "variables" as *;
+
+.barraInicial {
+  background-color: $rosa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+
+  .logo { width: 5%; }
+
+  .navegacion {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    padding-right: 35px;
+
+    li a {
+      text-decoration: none;
+      color: black;
+    }
+  }
+}

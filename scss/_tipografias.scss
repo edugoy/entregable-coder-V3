@@ -1,0 +1,7 @@
+@use "variables" as *;
+
+h2 {
+  font-family: $font-title;
+  text-align: center;
+  font-size: x-large;
+}

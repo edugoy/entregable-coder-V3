@@ -1,0 +1,42 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.contenedorInfo {
+  background: $rosa;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin: 10px;
+  padding: 10px;
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid $gris-hr;
+
+    &:last-child { border-bottom: none; }
+  }
+
+  img {
+    width: 48px;
+    height: auto;
+    margin-bottom: .5rem;
+  }
+
+  @include respond(lg) {
+    flex-direction: row;
+    align-items: center;
+
+    > div {
+      flex: 1;
+      padding: 0 1rem;
+      border-bottom: none;
+      border-right: 1px solid $gris-hr;
+
+      &:last-child { border-right: none; }
+    }
+  }
+}

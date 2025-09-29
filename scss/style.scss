@@ -1,0 +1,15 @@
+// 1) Tokens globales
+@use "variables";
+@use "mixins";
+
+// 2) Base
+@use "reset";
+@use "tipografias";
+
+// 3) Layout
+@use "header";
+@use "carousel";
+@use "info-bar";
+@use "nosotros";
+@use "productos";
+@use "footer";

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isalop | Lenceria Femenina</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Optimizar conexion a google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <!-- Link BT -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    
+</head>
+<body>
+    <header class="container-fluid p-0">        
+        <div class="barraInicial">
+            <img class="logo" src="recursos/Logo-Isalop.png" alt="Logo de la tienda">
+            <!-- Barra de navegacion entre cada seccion de la landing page -->
+            <nav>
+                <ul class="navegacion">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#nosotros">Acerca de nosotros</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+            <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner mejorasImagenes">
+                <div class="carousel-item active">
+                <img src="recursos/GRAN-APERTURA-carrusel.png" class="d-block w-100 mejorasImagenes" alt="Apertura del Local">
+                </div>
+                <div class="carousel-item">
+                <img src="recursos/conjuntaso-carrusel.jpg" class="d-block w-100 mejorasImagenes" alt="conjunto 1">
+                </div>
+                <div class="carousel-item">
+                <img src="recursos/bombbachas-carrusel.jpg" class="d-block w-100 mejorasImagenes" alt="bombachas">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+            </div>
+
+        <div class="contenedorInfo">
+            <div class="envio">
+                <img src="recursos/barraInfo/envio.png" alt="envio">
+                <p>envios a todo CABA</p>
+            </div>
+            <div class="pago">
+                <img src="recursos/barraInfo/pago.png" alt="pagos">
+                <p>todos los medios de pago</p>
+            </div>
+            <div class="Ubi">
+                <img src="recursos/barraInfo/ubi.png" alt="ubicacion">
+                <p>Balvanera, CABA</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio"> 
+            <h2>Elegencia y calidad en cada prenda</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus molestias modi quas error dolore ab alias ipsam? Distinctio exercitationem sit facere iure neque, eveniet, vitae alias provident laborum sunt delectus?</p>
+        </section>
+
+        <section id="nosotros">
+            <h2>Conocenos un poco mas</h2>
+            <div class="contenedor"> 
+                <div class="textoUs">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, molestias illo iusto perspiciatis illum ipsa dolorum accusamus ea ut adipisci, dolorem sed neque amet corporis similique aspernatur expedita optio eius!</p>
+                </div>
+                <div class="fotoUs">
+                    <img src="recursos/imagen-del-local.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section id="productos">
+                <h2>Nuestros mejores productos</h2>
+                <div class="productos-ind">
+                    <!-- cada "article" representa un producto individualmente -->
+                    <article>
+                        <img src="recursos/corpiños-tul.jpg" alt="corpiños de tul">
+                        <h3>Corpiño de tul</h3>
+                        <p>$$$</p>
+                    </article>
+
+                    <article>
+                        <img src="recursos/corpiño-encaje.jpg" alt="corpiños de encaje">
+                        <h3>Corpiño de encaje</h3>
+                        <p>$$$</p>
+                    </article>
+
+                    <article>
+                        <img src="recursos/bombachas-encaje.jpg" alt="bombachcas de encaje">
+                        <h3>Bombacha de encaje</h3>
+                        <p>$$$</p>
+                    </article>
+
+                    <article>
+                        <img src="recursos/conjunto-encaje.jpg" alt="conjunto de encaje">
+                        <h3>Conjunto de encaje</h3>
+                        <p>$$$</p>
+                    </article>
+                </div>
+        </section>
+
+        <section id="contacto">
+            <h2>Contactanos por cualquiera de estos medios</h2>
+            <!-- Redes de contacto (instagran real, los otros 2 ejemplos son ficticios) --> 
+            <ul>
+                <li><a href="https://www.instagram.com/isalop_lenceria/" target="_blank">Instagram</a></li>
+                <li><a href="mailto:ejemplo@correo.com" target="_blank">Nuestro mail</a></li>
+                <li><a href="https://wa.me/5491112345678" target="_blank">Escribinos por WhatsApp </a></li>
+            </ul>
+        </section>
+    </main>
+    
+    <footer>
+        <p>Todos los derechos reservados</p>
+    </footer>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+#nosotros {
+  .contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;     // centra en mobile
+    gap: 1.5rem;
+    text-align: center;
+    margin-top: 2rem;
+
+    // ancho agradable y centrado
+    max-width: $container-max;
+    width: calc(100% - 2rem);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  // Recuadro gris para el texto
+  .textoUs {
+    order: 2;
+    background: $panel-bg;
+    border-radius: $radius-md;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .fotoUs {
+    order: 1;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: $radius-md;
+      display: block;
+    }
+  }
+
+  // Desktop: fila, texto izquierda, foto derecha, misma altura
+  @include respond(lg) {
+    .contenedor {
+      flex-direction: row;
+      justify-content: center;
+      align-items: stretch;   // iguala alturas
+      text-align: left;
+    }
+
+    .textoUs {
+      order: 1;
+      flex: 1 1 0;
+    }
+
+    .fotoUs {
+      order: 2;
+      flex: 1 1 0;
+
+      img {
+        width: 100%;
+        height: 100%;         // iguala altura con .textoUs
+        object-fit: cover;    // usar 'contain' si no querés recorte
+        border-radius: $radius-md;
+      }
+    }
+  }
+}

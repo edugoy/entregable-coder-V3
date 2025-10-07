@@ -1,5 +1,6 @@
 @use "variables" as *;
 @use "mixins" as *;
+@use "placeholders";
 
 .productos-ind {
   display: grid;
@@ -11,17 +12,21 @@
   h3, p { font-family: $font-body; }
 
   article {
-    background: #fff;
-    border: 1px solid $gris-borde-light;
-    border-radius: 12px;
+    @extend %card; 
     padding: .75rem;
     text-align: center;
 
-    // hover smooth + no reflow
-    position: relative;                         // permite elevar con z-index
+    position: relative;
     transition: transform .25s ease, box-shadow .25s ease;
     transform-origin: center;
     will-change: transform;
+
+    &:hover,
+    &:focus-within {
+      transform: scale(1.03);
+      box-shadow: 0 12px 24px rgba(0,0,0,.12);
+      z-index: 1;
+    }
   }
 
   img {

@@ -1,0 +1,233 @@
+.productos-ind article, #nosotros .textoUs {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h2 {
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  font-size: x-large;
+}
+
+.barraInicial {
+  background-color: #fde6ec;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.barraInicial .logo {
+  width: 5%;
+}
+.barraInicial .navegacion {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+  padding-right: 35px;
+}
+.barraInicial .navegacion li a {
+  text-decoration: none;
+  color: black;
+}
+
+/* evita desbordes */
+.carousel {
+  overflow: hidden;
+}
+
+/* alto del carrusel */
+.carousel-inner {
+  height: 600px;
+}
+
+/* cada slide debe heredar ese alto */
+.carousel-item {
+  height: 100%;
+}
+
+/* la imagen llena el slide sin salirse */
+.carousel-item > img.mejorasImagenes {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 991.98px) {
+  .carousel-inner,
+  .carousel-item {
+    height: 55vh;
+    min-height: 320px;
+  }
+}
+.contenedorInfo {
+  background: #fde6ec;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin: 10px;
+  padding: 10px;
+}
+.contenedorInfo > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #999;
+}
+.contenedorInfo > div:last-child {
+  border-bottom: none;
+}
+.contenedorInfo img {
+  width: 48px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+@media (min-width: 992px) {
+  .contenedorInfo {
+    flex-direction: row;
+    align-items: center;
+  }
+  .contenedorInfo > div {
+    flex: 1;
+    padding: 0 1rem;
+    border-bottom: none;
+    border-right: 1px solid #999;
+  }
+  .contenedorInfo > div:last-child {
+    border-right: none;
+  }
+}
+
+#nosotros .contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+  margin-top: 2rem;
+  max-width: 1100px;
+  width: calc(100% - 2rem);
+  margin-left: auto;
+  margin-right: auto;
+}
+#nosotros .textoUs {
+  order: 2;
+  background: #f3f4f6;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#nosotros .fotoUs {
+  order: 1;
+}
+#nosotros .fotoUs img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+}
+@media (min-width: 992px) {
+  #nosotros .contenedor {
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    text-align: left;
+  }
+  #nosotros .textoUs {
+    order: 1;
+    flex: 1 1 0;
+  }
+  #nosotros .fotoUs {
+    order: 2;
+    flex: 1 1 0;
+  }
+  #nosotros .fotoUs img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+}
+
+.productos-ind {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+  overflow: visible;
+}
+.productos-ind h3, .productos-ind p {
+  font-family: "Montserrat", sans-serif;
+}
+.productos-ind article {
+  padding: 0.75rem;
+  text-align: center;
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transform-origin: center;
+  will-change: transform;
+}
+.productos-ind article:hover, .productos-ind article:focus-within {
+  transform: scale(1.03);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+  z-index: 1;
+}
+.productos-ind img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+@media (min-width: 992px) {
+  .productos-ind {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .productos-ind article:hover,
+  .productos-ind article:focus-within {
+    transform: scale(1.03);
+    z-index: 2;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .productos-ind article {
+    transition: none;
+  }
+  .productos-ind article:hover,
+  .productos-ind article:focus-within {
+    transform: none;
+    box-shadow: none;
+  }
+}
+footer p {
+  background-color: #fde6ec;
+  text-align: center;
+}
+
+/* Redes de contacto (listas centradas con links negros) */
+main section ul li {
+  list-style: none;
+  text-align: center;
+}
+main section ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,5 +1,6 @@
 @use "variables" as *;
 @use "mixins" as *;
+@use "placeholders";
 
 #nosotros {
   .contenedor {
@@ -18,15 +19,15 @@
   }
 
   // Recuadro gris para el texto
-  .textoUs {
-    order: 2;
-    background: $panel-bg;
-    border-radius: $radius-md;
-    padding: 1.25rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+.textoUs {
+  @extend %card;
+  order: 2;
+  background: $panel-bg;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
   .fotoUs {
     order: 1;

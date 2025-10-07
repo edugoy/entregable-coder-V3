@@ -1,0 +1,16 @@
+@use "variables" as *;
+
+%card {
+  background: #fff;
+  border: 1px solid $gris-borde-light;
+  border-radius: $radius-md;
+  box-shadow: 0 8px 20px rgba(0,0,0,.08);
+}
+
+%btn {
+  display: inline-block;
+  padding: .5rem .9rem;
+  border-radius: $radius-md;
+  text-decoration: none;
+  font-weight: 600;
+}
